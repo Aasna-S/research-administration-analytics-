@@ -18,11 +18,8 @@ A university is moving from a legacy electronic research-administration system t
 ## Files
 
 - `Research_Administration_Tableau_Project.xlsx` - full workbook with raw data, reconciled output, mappings, QA results, KPI definitions and Tableau build specifications
-- `Research_Administration_Case_Study.pdf` - concise two-page hiring-manager work sample
 - `data/` - Tableau-ready CSV tables, including a one-row migration KPI source
-- `sql/research_migration_snowflake.sql` - staged Snowflake-style reconciliation and certified reporting view
-- `tableau/tableau_calculated_fields.txt` - ready-to-use calculated fields
-- `tableau/tableau_build_guide.md` - connection, worksheet, dashboard and publishing guide
+- `sql/research_migration_snowflake.sql` - staged Snowflake-style reconciliation and certified reporting view sample
 
 ## Controlled migration defects
 
