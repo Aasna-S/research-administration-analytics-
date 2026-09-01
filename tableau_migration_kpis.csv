@@ -1,0 +1,2 @@
+﻿as_of_date,legacy_record_count,current_row_count,migrated_unique_record_count,records_requiring_review,clean_match_rate,migration_completeness,critical_issues,high_issues,medium_issues,missing_records,duplicate_records,financial_discrepancies,total_issue_flags
+2026-08-31,2500,2495,2488,52,0.9792,0.9952,12,26,14,12,7,14,52
