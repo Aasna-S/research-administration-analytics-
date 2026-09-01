@@ -1,8 +1,0 @@
-﻿legacy_status_code,current_status_code,reporting_status,is_decided,is_awarded
-SUB,SUBMITTED,Submitted,No,No
-REV,UNDER_REVIEW,Under Review,No,No
-WD,WITHDRAWN,Withdrawn,No,No
-DCL,NOT_FUNDED,Not Funded,Yes,No
-AWD,AWARDED,Awarded,Yes,Yes
-ACT,ACTIVE,Active,Yes,Yes
-CLS,CLOSED,Closed,Yes,Yes
