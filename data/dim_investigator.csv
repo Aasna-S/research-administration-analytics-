@@ -1,0 +1,181 @@
+﻿investigator_id,legacy_investigator_id,investigator_name,college_code,college_name,career_stage
+R0001,I1001,Fatima Khan,LAW,School of Law and Public Policy,Senior
+R0002,I1002,Jonah Smith,ENG,College of Engineering,Early Career
+R0003,I1003,Olivia Costa,SOC,College of Social Innovation,Established
+R0004,I1004,Yara Lee,HUM,College of Humanities,Established
+R0005,I1005,Daniel Walker,BUS,School of Business,Early Career
+R0006,I1006,Jamal Garcia,SCI,College of Science,Established
+R0007,I1007,Nadia Nguyen,HSC,College of Health Sciences,Established
+R0008,I1008,Theo Yamamoto,ARC,College of Architecture and Design,Senior
+R0009,I1009,Carlos Ito,LAW,School of Law and Public Policy,Early Career
+R0010,I1010,Hana Roy,ENG,College of Engineering,Early Career
+R0011,I1011,Maya Bennett,SOC,College of Social Innovation,Early Career
+R0012,I1012,Samira Kim,HUM,College of Humanities,Early Career
+R0013,I1013,Arjun Thomas,BUS,School of Business,Established
+R0014,I1014,Gabriel Dubois,SCI,College of Science,Established
+R0015,I1015,Leila Martin,HSC,College of Health Sciences,Early Career
+R0016,I1016,Priya Wang,ARC,College of Architecture and Design,Established
+R0017,I1017,Zain Gupta,LAW,School of Law and Public Policy,Established
+R0018,I1018,Elena Patel,ENG,College of Engineering,Established
+R0019,I1019,Jia Zhou,SOC,College of Social Innovation,Early Career
+R0020,I1020,Noah Johnson,HUM,College of Humanities,Senior
+R0021,I1021,Victor Singh,BUS,School of Business,Established
+R0022,I1022,Chloe Chen,SCI,College of Science,Senior
+R0023,I1023,Isabelle Laurent,HSC,College of Health Sciences,Established
+R0024,I1024,Mei Tran,ARC,College of Architecture and Design,Established
+R0025,I1025,Sofia Evans,LAW,School of Law and Public Policy,Early Career
+R0026,I1026,Camille Mensah,ENG,College of Engineering,Established
+R0027,I1027,Grace Williams,SOC,College of Social Innovation,Early Career
+R0028,I1028,Lucas Haddad,HUM,College of Humanities,Established
+R0029,I1029,Rafael Reyes,BUS,School of Business,Established
+R0030,I1030,Amina Ahmed,SCI,College of Science,Established
+R0031,I1031,Fatima Khan,HSC,College of Health Sciences,Established
+R0032,I1032,Jonah Smith,ARC,College of Architecture and Design,Senior
+R0033,I1033,Olivia Costa,LAW,School of Law and Public Policy,Established
+R0034,I1034,Yara Lee,ENG,College of Engineering,Established
+R0035,I1035,Daniel Walker,SOC,College of Social Innovation,Established
+R0036,I1036,Jamal Garcia,HUM,College of Humanities,Early Career
+R0037,I1037,Nadia Nguyen,BUS,School of Business,Early Career
+R0038,I1038,Theo Yamamoto,SCI,College of Science,Senior
+R0039,I1039,Carlos Ito,HSC,College of Health Sciences,Senior
+R0040,I1040,Hana Roy,ARC,College of Architecture and Design,Early Career
+R0041,I1041,Maya Bennett,LAW,School of Law and Public Policy,Established
+R0042,I1042,Samira Kim,ENG,College of Engineering,Senior
+R0043,I1043,Arjun Thomas,SOC,College of Social Innovation,Early Career
+R0044,I1044,Gabriel Dubois,HUM,College of Humanities,Established
+R0045,I1045,Leila Martin,BUS,School of Business,Early Career
+R0046,I1046,Priya Wang,SCI,College of Science,Senior
+R0047,I1047,Zain Gupta,HSC,College of Health Sciences,Senior
+R0048,I1048,Elena Patel,ARC,College of Architecture and Design,Early Career
+R0049,I1049,Jia Zhou,LAW,School of Law and Public Policy,Senior
+R0050,I1050,Noah Johnson,ENG,College of Engineering,Senior
+R0051,I1051,Victor Singh,SOC,College of Social Innovation,Established
+R0052,I1052,Chloe Chen,HUM,College of Humanities,Senior
+R0053,I1053,Isabelle Laurent,BUS,School of Business,Early Career
+R0054,I1054,Mei Tran,SCI,College of Science,Established
+R0055,I1055,Sofia Evans,HSC,College of Health Sciences,Early Career
+R0056,I1056,Camille Mensah,ARC,College of Architecture and Design,Established
+R0057,I1057,Grace Williams,LAW,School of Law and Public Policy,Established
+R0058,I1058,Lucas Haddad,ENG,College of Engineering,Early Career
+R0059,I1059,Rafael Reyes,SOC,College of Social Innovation,Senior
+R0060,I1060,Amina Ahmed,HUM,College of Humanities,Established
+R0061,I1061,Fatima Khan,BUS,School of Business,Early Career
+R0062,I1062,Jonah Smith,SCI,College of Science,Senior
+R0063,I1063,Olivia Costa,HSC,College of Health Sciences,Early Career
+R0064,I1064,Yara Lee,ARC,College of Architecture and Design,Early Career
+R0065,I1065,Daniel Walker,LAW,School of Law and Public Policy,Established
+R0066,I1066,Jamal Garcia,ENG,College of Engineering,Established
+R0067,I1067,Nadia Nguyen,SOC,College of Social Innovation,Senior
+R0068,I1068,Theo Yamamoto,HUM,College of Humanities,Established
+R0069,I1069,Carlos Ito,BUS,School of Business,Established
+R0070,I1070,Hana Roy,SCI,College of Science,Established
+R0071,I1071,Maya Bennett,HSC,College of Health Sciences,Early Career
+R0072,I1072,Samira Kim,ARC,College of Architecture and Design,Established
+R0073,I1073,Arjun Thomas,LAW,School of Law and Public Policy,Early Career
+R0074,I1074,Gabriel Dubois,ENG,College of Engineering,Established
+R0075,I1075,Leila Martin,SOC,College of Social Innovation,Established
+R0076,I1076,Priya Wang,HUM,College of Humanities,Early Career
+R0077,I1077,Zain Gupta,BUS,School of Business,Established
+R0078,I1078,Elena Patel,SCI,College of Science,Senior
+R0079,I1079,Jia Zhou,HSC,College of Health Sciences,Established
+R0080,I1080,Noah Johnson,ARC,College of Architecture and Design,Established
+R0081,I1081,Victor Singh,LAW,School of Law and Public Policy,Established
+R0082,I1082,Chloe Chen,ENG,College of Engineering,Established
+R0083,I1083,Isabelle Laurent,SOC,College of Social Innovation,Established
+R0084,I1084,Mei Tran,HUM,College of Humanities,Senior
+R0085,I1085,Sofia Evans,BUS,School of Business,Established
+R0086,I1086,Camille Mensah,SCI,College of Science,Established
+R0087,I1087,Grace Williams,HSC,College of Health Sciences,Senior
+R0088,I1088,Lucas Haddad,ARC,College of Architecture and Design,Early Career
+R0089,I1089,Rafael Reyes,LAW,School of Law and Public Policy,Established
+R0090,I1090,Amina Ahmed,ENG,College of Engineering,Established
+R0091,I1091,Fatima Khan,SOC,College of Social Innovation,Early Career
+R0092,I1092,Jonah Smith,HUM,College of Humanities,Early Career
+R0093,I1093,Olivia Costa,BUS,School of Business,Early Career
+R0094,I1094,Yara Lee,SCI,College of Science,Established
+R0095,I1095,Daniel Walker,HSC,College of Health Sciences,Early Career
+R0096,I1096,Jamal Garcia,ARC,College of Architecture and Design,Established
+R0097,I1097,Nadia Nguyen,LAW,School of Law and Public Policy,Established
+R0098,I1098,Theo Yamamoto,ENG,College of Engineering,Early Career
+R0099,I1099,Carlos Ito,SOC,College of Social Innovation,Senior
+R0100,I1100,Hana Roy,HUM,College of Humanities,Early Career
+R0101,I1101,Maya Bennett,BUS,School of Business,Established
+R0102,I1102,Samira Kim,SCI,College of Science,Established
+R0103,I1103,Arjun Thomas,HSC,College of Health Sciences,Established
+R0104,I1104,Gabriel Dubois,ARC,College of Architecture and Design,Early Career
+R0105,I1105,Leila Martin,LAW,School of Law and Public Policy,Established
+R0106,I1106,Priya Wang,ENG,College of Engineering,Early Career
+R0107,I1107,Zain Gupta,SOC,College of Social Innovation,Early Career
+R0108,I1108,Elena Patel,HUM,College of Humanities,Established
+R0109,I1109,Jia Zhou,BUS,School of Business,Established
+R0110,I1110,Noah Johnson,SCI,College of Science,Early Career
+R0111,I1111,Victor Singh,HSC,College of Health Sciences,Senior
+R0112,I1112,Chloe Chen,ARC,College of Architecture and Design,Early Career
+R0113,I1113,Isabelle Laurent,LAW,School of Law and Public Policy,Established
+R0114,I1114,Mei Tran,ENG,College of Engineering,Early Career
+R0115,I1115,Sofia Evans,SOC,College of Social Innovation,Early Career
+R0116,I1116,Camille Mensah,HUM,College of Humanities,Early Career
+R0117,I1117,Grace Williams,BUS,School of Business,Established
+R0118,I1118,Lucas Haddad,SCI,College of Science,Senior
+R0119,I1119,Rafael Reyes,HSC,College of Health Sciences,Established
+R0120,I1120,Amina Ahmed,ARC,College of Architecture and Design,Early Career
+R0121,I1121,Fatima Khan,LAW,School of Law and Public Policy,Early Career
+R0122,I1122,Jonah Smith,ENG,College of Engineering,Established
+R0123,I1123,Olivia Costa,SOC,College of Social Innovation,Early Career
+R0124,I1124,Yara Lee,HUM,College of Humanities,Established
+R0125,I1125,Daniel Walker,BUS,School of Business,Established
+R0126,I1126,Jamal Garcia,SCI,College of Science,Established
+R0127,I1127,Nadia Nguyen,HSC,College of Health Sciences,Senior
+R0128,I1128,Theo Yamamoto,ARC,College of Architecture and Design,Established
+R0129,I1129,Carlos Ito,LAW,School of Law and Public Policy,Established
+R0130,I1130,Hana Roy,ENG,College of Engineering,Senior
+R0131,I1131,Maya Bennett,SOC,College of Social Innovation,Established
+R0132,I1132,Samira Kim,HUM,College of Humanities,Early Career
+R0133,I1133,Arjun Thomas,BUS,School of Business,Early Career
+R0134,I1134,Gabriel Dubois,SCI,College of Science,Early Career
+R0135,I1135,Leila Martin,HSC,College of Health Sciences,Established
+R0136,I1136,Priya Wang,ARC,College of Architecture and Design,Senior
+R0137,I1137,Zain Gupta,LAW,School of Law and Public Policy,Established
+R0138,I1138,Elena Patel,ENG,College of Engineering,Early Career
+R0139,I1139,Jia Zhou,SOC,College of Social Innovation,Established
+R0140,I1140,Noah Johnson,HUM,College of Humanities,Early Career
+R0141,I1141,Victor Singh,BUS,School of Business,Senior
+R0142,I1142,Chloe Chen,SCI,College of Science,Established
+R0143,I1143,Isabelle Laurent,HSC,College of Health Sciences,Early Career
+R0144,I1144,Mei Tran,ARC,College of Architecture and Design,Early Career
+R0145,I1145,Sofia Evans,LAW,School of Law and Public Policy,Senior
+R0146,I1146,Camille Mensah,ENG,College of Engineering,Senior
+R0147,I1147,Grace Williams,SOC,College of Social Innovation,Early Career
+R0148,I1148,Lucas Haddad,HUM,College of Humanities,Established
+R0149,I1149,Rafael Reyes,BUS,School of Business,Early Career
+R0150,I1150,Amina Ahmed,SCI,College of Science,Established
+R0151,I1151,Fatima Khan,HSC,College of Health Sciences,Early Career
+R0152,I1152,Jonah Smith,ARC,College of Architecture and Design,Early Career
+R0153,I1153,Olivia Costa,LAW,School of Law and Public Policy,Senior
+R0154,I1154,Yara Lee,ENG,College of Engineering,Senior
+R0155,I1155,Daniel Walker,SOC,College of Social Innovation,Early Career
+R0156,I1156,Jamal Garcia,HUM,College of Humanities,Established
+R0157,I1157,Nadia Nguyen,BUS,School of Business,Early Career
+R0158,I1158,Theo Yamamoto,SCI,College of Science,Established
+R0159,I1159,Carlos Ito,HSC,College of Health Sciences,Early Career
+R0160,I1160,Hana Roy,ARC,College of Architecture and Design,Established
+R0161,I1161,Maya Bennett,LAW,School of Law and Public Policy,Established
+R0162,I1162,Samira Kim,ENG,College of Engineering,Established
+R0163,I1163,Arjun Thomas,SOC,College of Social Innovation,Early Career
+R0164,I1164,Gabriel Dubois,HUM,College of Humanities,Senior
+R0165,I1165,Leila Martin,BUS,School of Business,Early Career
+R0166,I1166,Priya Wang,SCI,College of Science,Senior
+R0167,I1167,Zain Gupta,HSC,College of Health Sciences,Established
+R0168,I1168,Elena Patel,ARC,College of Architecture and Design,Early Career
+R0169,I1169,Jia Zhou,LAW,School of Law and Public Policy,Established
+R0170,I1170,Noah Johnson,ENG,College of Engineering,Established
+R0171,I1171,Victor Singh,SOC,College of Social Innovation,Early Career
+R0172,I1172,Chloe Chen,HUM,College of Humanities,Early Career
+R0173,I1173,Isabelle Laurent,BUS,School of Business,Established
+R0174,I1174,Mei Tran,SCI,College of Science,Established
+R0175,I1175,Sofia Evans,HSC,College of Health Sciences,Early Career
+R0176,I1176,Camille Mensah,ARC,College of Architecture and Design,Early Career
+R0177,I1177,Grace Williams,LAW,School of Law and Public Policy,Established
+R0178,I1178,Lucas Haddad,ENG,College of Engineering,Established
+R0179,I1179,Rafael Reyes,SOC,College of Social Innovation,Early Career
+R0180,I1180,Amina Ahmed,HUM,College of Humanities,Established

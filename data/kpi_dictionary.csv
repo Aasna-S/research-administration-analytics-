@@ -1,0 +1,8 @@
+﻿kpi_name,definition,calculation,grain,owner
+Proposals Submitted,Distinct proposals with a submission date in the selected period.,DISTINCTCOUNT(proposal_id),Proposal,Research Analytics
+Requested Funding,Sum of requested funding for submitted proposals.,SUM(requested_amount),Proposal,Research Analytics
+Awarded Funding,"Sum of obligated award amounts for awarded, active, or closed awards.",SUM(awarded_amount),Award,Research Finance
+Award Success Rate,Awarded decisions divided by all funded and not-funded decisions; pending and withdrawn proposals are excluded.,Awarded / (Awarded + Not Funded),Proposal,Research Analytics
+Active Awards,Distinct awards whose governed reporting status is Active.,"DISTINCTCOUNT(award_id), status = Active",Award,Research Operations
+Average Days to Decision,"Average calendar days from submission to final funding decision, excluding pending and withdrawn proposals.","AVERAGE(days_to_decision), decided records",Proposal,Research Operations
+Clean Migration Match Rate,Legacy proposals with no migration issue divided by total legacy proposals.,1 - issue records / legacy proposals,Proposal,Data Quality
