@@ -31,4 +31,4 @@ The dataset contains 2,500 legacy proposal records and deliberately plants 52 re
 
 ## Important disclaimer
 
-All institutions, people, sponsors, identifiers and financial values are synthetic. This project contains no confidential or internal university information and is not affiliated with Northeastern University or McGill University.
+All institutions, people, sponsors, identifiers and financial values are synthetic.
