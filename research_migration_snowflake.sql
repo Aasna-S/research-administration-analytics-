@@ -1,10 +1,6 @@
 /*
 Research Administration Reporting Modernization
 Snowflake-style reconciliation and reporting model
-
-Portfolio note: all data in this project is synthetic. The SQL assumes the CSVs
-have been loaded into RAW.LEGACY_PROPOSALS, RAW.CURRENT_PROPOSALS and the
-dimension/mapping tables using their file headers as column names.
 */
 
 CREATE OR REPLACE TEMP VIEW STG_LEGACY_PROPOSALS AS
