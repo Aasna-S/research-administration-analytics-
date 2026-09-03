@@ -21,9 +21,7 @@ The script:
 Synthetic-data disclaimer
 -------------------------
 All institutions, identifiers, sponsors, people, and financial values in this
-project are synthetic. This script is a portfolio reference implementation and
-is not connected to Northeastern University, McGill University, or any
-production eRA environment.
+project are synthetic. 
 
 Assumptions
 -----------
