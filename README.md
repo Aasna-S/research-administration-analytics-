@@ -18,20 +18,6 @@ For this project, I created a synthetic research administration dataset and buil
 * Documented KPI definitions, field mappings and validation rules
 
 
-## Data Pipeline
-Legacy + Cloud Data
-      ↓
-Standardization
-      ↓
-SQL Reconciliation
-      ↓
-QA / Exception Handling
-      ↓
-Reporting Model
-      ↓
-Tableau
-
-
 
 ## Files
 
