@@ -1,16 +1,19 @@
 /*
 Research Administration Reporting Modernization
-Snowflake reconciliation and QA workflow
+SQL reconciliation and data quality checks
 
-Synthetic portfolio project using legacy and current eRA proposal extracts.
-Raw files are loaded separately and remain unchanged.
+Synthetic project comparing proposal data from a legacy eRA system
+with data from a newer system.
 
-Expected source tables:
+The source files are loaded separately and left unchanged.
+
+Source tables:
 - RESEARCH_ADMIN_ANALYTICS.STAGING.LEGACY_PROPOSALS
 - RESEARCH_ADMIN_ANALYTICS.STAGING.ERA_PROPOSALS
 */
 
--- Setup
+
+-- Database and schemas
 
 CREATE DATABASE IF NOT EXISTS RESEARCH_ADMIN_ANALYTICS;
 
@@ -21,7 +24,8 @@ CREATE SCHEMA IF NOT EXISTS RESEARCH_ADMIN_ANALYTICS.REPORTING;
 USE DATABASE RESEARCH_ADMIN_ANALYTICS;
 USE SCHEMA STAGING;
 
--- Standardize legacy proposal data
+
+-- Clean and standardize legacy data
 
 CREATE OR REPLACE VIEW
 RESEARCH_ADMIN_ANALYTICS.STAGING.VW_LEGACY_STANDARDIZED AS
@@ -50,7 +54,7 @@ SELECT
 
     NULLIF(TRIM(TO_VARCHAR(PROP_STATUS_CD)), '') AS LEGACY_STATUS_CODE,
 
-    -- Legacy status mapping
+    -- Convert legacy status codes to common reporting values
     CASE TRIM(TO_VARCHAR(PROP_STATUS_CD))
         WHEN 'SUB' THEN 'Submitted'
         WHEN 'REV' THEN 'Under Review'
@@ -95,7 +99,8 @@ SELECT
 
 FROM RESEARCH_ADMIN_ANALYTICS.STAGING.LEGACY_PROPOSALS;
 
--- Standardize current eRA proposal data
+
+-- Clean and standardize current-system data
 
 CREATE OR REPLACE VIEW
 RESEARCH_ADMIN_ANALYTICS.STAGING.VW_CURRENT_STANDARDIZED AS
@@ -132,7 +137,7 @@ SELECT
     NULLIF(TRIM(TO_VARCHAR(WORKFLOW_STATUS)), '')
         AS CURRENT_STATUS_CODE,
 
-    -- Current status mapping
+    -- Convert current-system status values to the same reporting categories
     CASE TRIM(TO_VARCHAR(WORKFLOW_STATUS))
         WHEN 'SUBMITTED'    THEN 'Submitted'
         WHEN 'UNDER_REVIEW' THEN 'Under Review'
@@ -174,7 +179,8 @@ SELECT
 
 FROM RESEARCH_ADMIN_ANALYTICS.STAGING.ERA_PROPOSALS;
 
--- Quick source checks
+
+-- Compare record counts between the two sources
 
 SELECT
     'LEGACY' AS SOURCE_SYSTEM,
@@ -190,7 +196,8 @@ SELECT
     COUNT(DISTINCT PROPOSAL_ID)
 FROM RESEARCH_ADMIN_ANALYTICS.STAGING.VW_CURRENT_STANDARDIZED;
 
--- Find duplicate target records before reconciliation
+
+-- Check for duplicate proposal records in the current system
 
 CREATE OR REPLACE VIEW
 RESEARCH_ADMIN_ANALYTICS.QA.VW_DUPLICATE_PROPOSALS AS
@@ -208,7 +215,8 @@ GROUP BY PROPOSAL_ID
 
 HAVING COUNT(*) > 1;
 
--- Keep the latest current-system row for comparison
+
+-- Keep the most recent version of each current-system record
 
 CREATE OR REPLACE VIEW
 RESEARCH_ADMIN_ANALYTICS.STAGING.VW_CURRENT_LATEST AS
@@ -224,14 +232,15 @@ QUALIFY ROW_NUMBER() OVER (
         CURRENT_PROPOSAL_ID DESC
 ) = 1;
 
--- Build the QA issue list
+
+-- Build a list of migration issues
 
 CREATE OR REPLACE VIEW
 RESEARCH_ADMIN_ANALYTICS.QA.QA_MIGRATION_ISSUES AS
 
 WITH ISSUES AS (
 
-    -- Missing migrations
+    -- Records that did not migrate to the current system
 
     SELECT
         L.PROPOSAL_ID,
@@ -251,9 +260,11 @@ WITH ISSUES AS (
 
     WHERE C.CURRENT_PROPOSAL_ID IS NULL
 
+
     UNION ALL
 
-    -- Duplicate target records
+
+    -- Duplicate proposal records in the current system
 
     SELECT
         D.PROPOSAL_ID,
@@ -267,9 +278,11 @@ WITH ISSUES AS (
 
     FROM RESEARCH_ADMIN_ANALYTICS.QA.VW_DUPLICATE_PROPOSALS D
 
+
     UNION ALL
 
-    -- Requested amount mismatches
+
+    -- Differences in requested funding amounts
 
     SELECT
         L.PROPOSAL_ID,
@@ -294,9 +307,11 @@ WITH ISSUES AS (
             OR ABS(L.REQUESTED_AMOUNT - C.REQUESTED_AMOUNT) > 0.01
         )
 
+
     UNION ALL
 
-    -- Award amount mismatches
+
+    -- Differences in awarded funding amounts
 
     SELECT
         L.PROPOSAL_ID,
@@ -321,9 +336,11 @@ WITH ISSUES AS (
             OR ABS(L.AWARDED_AMOUNT - C.AWARDED_AMOUNT) > 0.01
         )
 
+
     UNION ALL
 
-    -- Missing researcher keys
+
+    -- Missing researcher IDs
 
     SELECT
         C.PROPOSAL_ID,
@@ -343,9 +360,11 @@ WITH ISSUES AS (
     WHERE C.RESEARCHER_KEY IS NULL
        OR TRIM(C.RESEARCHER_KEY) = ''
 
+
     UNION ALL
 
-    -- Unmapped statuses
+
+    -- Status values that do not match the expected mapping
 
     SELECT
         C.PROPOSAL_ID,
@@ -373,9 +392,11 @@ WITH ISSUES AS (
             'CLOSED'
        )
 
+
     UNION ALL
 
-    -- Invalid sponsor IDs in the synthetic test data
+
+    -- Sponsor IDs that do not match the expected values in the test data
 
     SELECT
         C.PROPOSAL_ID,
@@ -394,9 +415,11 @@ WITH ISSUES AS (
 
     WHERE C.SPONSOR_ID = 'S999'
 
+
     UNION ALL
 
-    -- Invalid org unit codes in the synthetic test data
+
+    -- Organization codes that do not match the expected values in the test data
 
     SELECT
         C.PROPOSAL_ID,
@@ -415,9 +438,11 @@ WITH ISSUES AS (
 
     WHERE C.ORG_UNIT_CODE = 'ZZZ'
 
+
     UNION ALL
 
-    -- Submission date mismatches
+
+    -- Submission dates that differ between the two systems
 
     SELECT
         L.PROPOSAL_ID,
@@ -458,7 +483,8 @@ SELECT
 
 FROM ISSUES;
 
--- Check results
+
+-- Review the number of issues by type and severity
 
 SELECT
     ISSUE_TYPE,
@@ -480,9 +506,18 @@ ORDER BY
     END,
     ISSUE_TYPE;
 
--- Expected synthetic QA counts:
--- 12 missing, 7 duplicate, 8 requested amount, 6 award amount,
--- 5 missing investigator, 4 status, 4 sponsor, 3 college, 3 date = 52 total
+
+-- Expected results for the synthetic test data:
+-- 12 missing records
+-- 7 duplicates
+-- 8 requested amount differences
+-- 6 award amount differences
+-- 5 missing investigators
+-- 4 status issues
+-- 4 sponsor issues
+-- 3 college issues
+-- 3 date issues
+-- 52 issues total
 
 SELECT
     COUNT(*) AS TOTAL_QA_ISSUES,
@@ -490,7 +525,8 @@ SELECT
 
 FROM RESEARCH_ADMIN_ANALYTICS.QA.QA_MIGRATION_ISSUES;
 
--- KPI view for Tableau
+
+-- Create summary metrics for the Tableau migration dashboard
 
 CREATE OR REPLACE VIEW
 RESEARCH_ADMIN_ANALYTICS.REPORTING.TABLEAU_MIGRATION_KPIS AS
@@ -559,7 +595,8 @@ LEFT JOIN QA Q
 
 GROUP BY L.LEGACY_RECORD_COUNT;
 
--- Records cleared for reporting
+
+-- Create a reporting view containing records with no outstanding QA issues
 
 CREATE OR REPLACE VIEW
 RESEARCH_ADMIN_ANALYTICS.REPORTING.VW_CERTIFIED_CURRENT_PROPOSALS AS
@@ -576,18 +613,26 @@ LEFT JOIN (
 
 WHERE Q.LEGACY_PROPOSAL_ID IS NULL;
 
--- Final checks
 
--- QA exceptions used by the Migration Quality dashboard.
+-- Final outputs
+
+
+-- QA issues used for the migration data quality dashboard
+
 SELECT *
 FROM RESEARCH_ADMIN_ANALYTICS.QA.QA_MIGRATION_ISSUES
 ORDER BY ISSUE_ID;
 
--- Tableau KPI source.
+
+-- Summary metrics used in Tableau
+
 SELECT *
 FROM RESEARCH_ADMIN_ANALYTICS.REPORTING.TABLEAU_MIGRATION_KPIS;
 
--- Clean/certified records available for governed reporting.
+
+-- Sample of current-system records with no outstanding QA issues
+
 SELECT *
 FROM RESEARCH_ADMIN_ANALYTICS.REPORTING.VW_CERTIFIED_CURRENT_PROPOSALS
 LIMIT 20;
+```
