@@ -19,7 +19,7 @@ For this project, I created a synthetic research administration dataset and buil
 
 ## Files
 
-* `Research_Administration_Tableau_Project.xlsx` — project workbook containing the source data, reconciliation results, mappings, QA checks, KPI definitions and Tableau dashboard specifications
+* `Research Administration Data Reconciliation Project.xlsx` — project workbook containing the source data, reconciliation results, mappings, QA checks, KPI definitions. 
 * `data/` — synthetic CSV datasets used in the project
 * `research_migration.sql` — SQL used to stage, compare and reconcile the datasets
 
