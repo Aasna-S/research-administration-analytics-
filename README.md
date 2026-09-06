@@ -17,6 +17,22 @@ For this project, I created a synthetic research administration dataset and buil
 * Defined requirements for executive, operational and data-quality dashboards
 * Documented KPI definitions, field mappings and validation rules
 
+
+## Data Pipeline
+Legacy + Cloud Data
+      ↓
+Standardization
+      ↓
+SQL Reconciliation
+      ↓
+QA / Exception Handling
+      ↓
+Reporting Model
+      ↓
+Tableau
+
+
+
 ## Files
 
 * `Research Administration Data Reconciliation Project.xlsx` — project workbook containing the source data, reconciliation results, mappings, QA checks, KPI definitions. 
@@ -36,6 +52,13 @@ The dataset contains 2,500 synthetic legacy proposal records. I intentionally in
 
 The final `fact_research_activity.csv` contains the standardized records prepared for reporting after those issues are resolved.
 
-## Disclaimer
+## Tableau Dashboard
 
-This project uses entirely synthetic data. All institutions, researchers, sponsors, identifiers and financial values were created for demonstration purposes.
+### Research Portfolio Overview
+![Research Portfolio Overview](images/dashboard-p1.png)
+
+
+### Migration & Data Quality
+![Migration and Data Quality](images/dashboard-p2.png)
+
+View interactive dashboard →
