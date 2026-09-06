@@ -8,15 +8,16 @@ During a system migration, the same proposal or award data may be represented di
 
 For this project, I created a synthetic research administration dataset and built a reconciliation process to identify those differences, flag records that need review and prepare a consistent dataset for reporting.
 
+**Tools:** SQL (Snowflake-compatible), Excel, Tableau
+
 ## What I worked on
 
-* Used SQL to compare and reconcile records between legacy and current-system data
+* Wrote Snowflake-compatible SQL to stage, standardize and reconcile records between legacy and current-system data
 * Created source-to-target mappings for fields and status values
 * Identified missing records, duplicates, financial mismatches and invalid values
-* Built a cleaned reporting table for use in Tableau
-* Defined requirements for executive, operational and data-quality dashboards
+* Built a standardized reporting table for downstream analysis
+* Built Tableau dashboards for portfolio reporting and migration/data-quality monitoring
 * Documented KPI definitions, field mappings and validation rules
-
 
 
 ## Files
@@ -27,7 +28,7 @@ For this project, I created a synthetic research administration dataset and buil
 
 ## Reconciliation test cases
 
-The dataset contains 2,500 synthetic legacy proposal records. I intentionally introduced 52 migration issues so the reconciliation logic could be tested against realistic problems such as:
+The dataset contains 2,500 synthetic legacy proposal records. I intentionally introduced 52 migration issues to test the reconciliation logic against problems such as:
 
 * missing records
 * duplicate records
@@ -36,7 +37,8 @@ The dataset contains 2,500 synthetic legacy proposal records. I intentionally in
 * date inconsistencies
 * status mapping issues
 
-The final `fact_research_activity.csv` contains the standardized records prepared for reporting after those issues are resolved.
+The reconciliation process identifies and categorizes these exceptions so they can be reviewed before the data is used for reporting. The resulting `fact_research_activity.csv` provides the standardized reporting dataset used by the Tableau dashboards.
+
 
 ## Tableau Dashboard
 
