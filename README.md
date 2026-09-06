@@ -55,10 +55,10 @@ The final `fact_research_activity.csv` contains the standardized records prepare
 ## Tableau Dashboard
 
 ### Research Portfolio Overview
-![Research Portfolio Overview](images/dashboard-p1.png)
+![Research Portfolio Overview](images/Dashboard Page1.png) 
 
 
 ### Migration & Data Quality
-![Migration and Data Quality](images/dashboard-p2.png)
+![Migration and Data Quality](images/Dashboard Page2.png) 
 
 View interactive dashboard →
