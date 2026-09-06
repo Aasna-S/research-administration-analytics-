@@ -61,4 +61,4 @@ The final `fact_research_activity.csv` contains the standardized records prepare
 ### Migration & Data Quality
 ![Migration and Data Quality](images/Dashboard%20Page2.png) 
 
-View interactive dashboard →
+View interactive dashboard →https://public.tableau.com/views/ResearchAdminPortfolio/ResearchPortfolioDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link 
