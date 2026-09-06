@@ -1,31 +1,41 @@
 # Research Administration Reporting Modernization
 
-Synthetic portfolio case study prepared for a Analyst role in university research administration.
+A synthetic case study I built to explore a common reporting challenge in university research administration: maintaining reliable reporting while moving from a legacy research system to a new cloud platform.
 
-## The business problem
+## Project overview
 
-A university is moving from a legacy electronic research-administration system to a current cloud platform. Leadership reporting must continue during the transition, but identifiers, status codes, date formats and financial fields differ across the two systems. The solution must reconcile the migration, isolate exceptions, document reporting definitions and provide reusable executive reporting.
+During a system migration, the same proposal or award data may be represented differently across the old and new systems. IDs, status values, dates, sponsor information and financial fields may not line up cleanly, which can create problems for reporting and data validation.
 
-## What this project demonstrates
+For this project, I created a synthetic research administration dataset and built a reconciliation process to identify those differences, flag records that need review and prepare a consistent dataset for reporting.
 
-- SQL-based validation and reconciliation across legacy and current systems
-- Source-to-target field mapping and governed status definitions
-- Exception handling for missing, duplicate, invalid and mismatched records
-- A standardized reporting fact prepared for focused Tableau dashboards
-- Executive, operational and data-quality dashboard requirements
-- Clear source-of-truth KPI definitions and technical documentation
+## What I worked on
+
+* Used SQL to compare and reconcile records between legacy and current-system data
+* Created source-to-target mappings for fields and status values
+* Identified missing records, duplicates, financial mismatches and invalid values
+* Built a cleaned reporting table for use in Tableau
+* Defined requirements for executive, operational and data-quality dashboards
+* Documented KPI definitions, field mappings and validation rules
 
 ## Files
 
-- `Research_Administration_Tableau_Project.xlsx` - full workbook with raw data, reconciled output, mappings, QA results, KPI definitions and Tableau build specifications
-- `data/` - CSV tables of synthetic data. 
-- `research_migration.sql` - staged SQL Snowflake-style reconciliation
+* `Research_Administration_Tableau_Project.xlsx` — project workbook containing the source data, reconciliation results, mappings, QA checks, KPI definitions and Tableau dashboard specifications
+* `data/` — synthetic CSV datasets used in the project
+* `research_migration.sql` — SQL used to stage, compare and reconcile the datasets
 
-## Controlled migration defects
+## Reconciliation test cases
 
-The dataset contains 2,500 legacy proposal records and deliberately plants 52 records requiring review, including missing and duplicate records, financial mismatches, invalid dimensional keys and date/status issues. The reconciled `fact_research_activity.csv` represents the governed post-remediation reporting output.
+The dataset contains 2,500 synthetic legacy proposal records. I intentionally introduced 52 migration issues so the reconciliation logic could be tested against realistic problems such as:
 
+* missing records
+* duplicate records
+* funding mismatches
+* invalid dimension keys
+* date inconsistencies
+* status mapping issues
 
-## Important disclaimer
+The final `fact_research_activity.csv` contains the standardized records prepared for reporting after those issues are resolved.
 
-All institutions, people, sponsors, identifiers and financial values are synthetic.
+## Disclaimer
+
+This project uses entirely synthetic data. All institutions, researchers, sponsors, identifiers and financial values were created for demonstration purposes.
