@@ -1,7 +1,5 @@
 # Snowflake SQL execution order
 
-This folder separates the portfolio SQL into the same logical stages used in the project.
-
 ## 1. `01_setup.sql`
 Creates the Snowflake database and the three logical schemas:
 
