@@ -133,14 +133,7 @@ WHERE Q.LEGACY_PROPOSAL_ID IS NULL;
 
 -- ============================================================
 -- 10. RESEARCH PORTFOLIO REPORTING FACT
---     This is the missing SQL that explains fact_research_activity.csv.
---
---     The portfolio view deliberately starts from the complete legacy
---     population (2,500 proposals), because the migration QA dashboard
---     separately identifies which of those records have not migrated or
---     have reconciliation issues.
---
---     Reference dimensions enrich the proposal-level transaction with
+--     Reference dimensions to enrich the proposal-level transaction with
 --     investigator, college, and sponsor descriptions.
 -- ============================================================
 
