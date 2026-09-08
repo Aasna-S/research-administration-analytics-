@@ -4,8 +4,6 @@ SQL reconciliation and data quality checks
 
 Synthetic project comparing proposal data from a legacy eRA system
 with data from a newer system.
-
-
 */
 
 
