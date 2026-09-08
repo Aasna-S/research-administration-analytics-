@@ -86,13 +86,3 @@ CSV data sources in Tableau:
 - `QA_MIGRATION_ISSUES` → `qa_issue_log.csv`
 - `TABLEAU_MIGRATION_KPIS` → `tableau_migration_kpis.csv`
 
-In a production implementation, Tableau could connect directly to the governed
-Snowflake reporting views or use scheduled Tableau extracts rather than manual CSV
-handoffs.
-
-## Interview summary
-
-> I organized the Snowflake work in execution order: setup, source standardization,
-> grain resolution/deduplication, reconciliation and QA, reporting views, and
-> validation. That separation makes it easier to trace where a problem originates
-> and keeps business logic upstream of Tableau.
