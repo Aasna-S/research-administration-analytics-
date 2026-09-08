@@ -5,11 +5,7 @@ SQL reconciliation and data quality checks
 Synthetic project comparing proposal data from a legacy eRA system
 with data from a newer system.
 
-The source files are loaded separately and left unchanged.
 
-Source tables:
-- RESEARCH_ADMIN_ANALYTICS.STAGING.LEGACY_PROPOSALS
-- RESEARCH_ADMIN_ANALYTICS.STAGING.ERA_PROPOSALS
 */
 
 
