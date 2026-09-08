@@ -9,7 +9,7 @@ Creates the Snowflake database and the three logical schemas:
 
 The CSV source/reference tables are assumed to have already been loaded into `STAGING`.
 For the portfolio, ingestion was intentionally kept simple rather than presenting a
-production `STAGE` / `COPY INTO` / Snowpipe process that was not actually implemented.
+production `STAGE` / `COPY INTO`  process that was not actually implemented.
 
 ## 2. `02_standardize_sources.sql`
 Creates:
@@ -25,7 +25,6 @@ This layer:
 - maps source statuses through `STATUS_MAPPING`
 - preserves raw submission values for QA traceability
 
-Conceptually this is similar to a **Silver/cleaned layer**.
 
 ## 3. `03_deduplicate_current.sql`
 Creates:
@@ -67,7 +66,6 @@ the complete legacy proposal population is enriched with investigator, college,
 and sponsor dimensions and with derived reporting fields such as fiscal year and
 days to decision.
 
-Conceptually this is similar to a **Gold/reporting layer**.
 
 ## 6. `06_validation_checks.sql`
 Runs:
